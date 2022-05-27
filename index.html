@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster EPC - Elderly people</title>
+    <!-- Fuentes CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content content__superior">
+            <div class="b_superior__title">
+                <h1>What is behind the geographical distribution of the elderly? Spatial patterns of the aging population in Spain</h1>
+                <p class="autores">J. Sebastian Ruiz-Santacruz, Joaquín Osorio-Arjona, Clara Bueno López, Carlos Muñoz Díaz, Julia de las Obras-Loscertales Sampériz and Diego Ramiro Fariñas</p>
+            </div>
+            <div class="b_superior__intro">
+                <p>The aging of Spain's population is the result of persistent declines in fertility rates, fewer children in number, and a sustained increase in life expectancy and survival to older ages that leads to a higher share of elderly people (age 65 years and older) in the population</p>
+            </div>            
+        </div>        
+        <div class="content content__main">
+            <div class="b_main b_main--left">
+                <div class="b_left">
+                    <div class="b__map" id="map_sat1"></div>
+                    <div class="b__text">
+                        <h3>Life expectancy at 65 years old</h3>
+                        <p class="note">Strong association in the north-western aged areas</p>
+                        <!-- <div class="legend">
+                            <div class="legend--up">
+                                <div class="legend--first"></div>
+                                <div class="legend--second"></div>
+                                <div class="legend--third"></div>
+                                <div class="legend--fourth"></div>
+                                <div class="legend--fifth"></div>
+                            </div>  
+                            <div class="legend--down">
+                                <span>120</span>
+                                <span>241.7</span>
+                            </div>
+                        </div> -->
+                    </div>                     
+                </div>
+                <div class="b_left">
+                    <div class="b__map" id="map_sat2"></div>
+                    <div class="b__text">
+                        <h3>Gross birth rate</h3>
+                        <p class="note">Average results for the center and coastal zones</p>
+                        <!-- <div class="legend">
+                            <div class="legend--up">
+                                <div class="legend--first"></div>
+                                <div class="legend--second"></div>
+                                <div class="legend--third"></div>
+                                <div class="legend--fourth"></div>
+                                <div class="legend--fifth"></div>
+                            </div>  
+                            <div class="legend--down">
+                                <span>120</span>
+                                <span>241.7</span>
+                            </div>
+                        </div> -->
+                    </div>                     
+                </div>
+                <div class="b_left">
+                    <div class="b__map" id="map_sat6"></div>
+                    <div class="b__text" style="width: 152.5px;">
+                        <h3>Health care centers relative to the aged population</h3>
+                        <p class="note" style="hyphens: auto;">Weak association in aged areas but significant in the south-west</p>
+                        <!-- <div class="legend">
+                            <div class="legend--up">
+                                <div class="legend--first"></div>
+                                <div class="legend--second"></div>
+                                <div class="legend--third"></div>
+                                <div class="legend--fourth"></div>
+                                <div class="legend--fifth"></div>
+                            </div>  
+                            <div class="legend--down">
+                                <span>120</span>
+                                <span>241.7</span>
+                            </div>
+                        </div> -->
+                    </div>    
+                    
+                </div>
+                <div class="b_left">
+                    <div class="b__map" id="map_sat4"></div>
+                    <div class="b__text">
+                        <h3>Foreign population</h3>
+                        <p class="note">Strong association in the south, but weaker in areas with a more aged population</p>
+                        <!-- <div class="legend">
+                            <div class="legend--up">
+                                <div class="legend--first"></div>
+                                <div class="legend--second"></div>
+                                <div class="legend--third"></div>
+                                <div class="legend--fourth"></div>
+                                <div class="legend--fifth"></div>
+                            </div>  
+                            <div class="legend--down">
+                                <span>120</span>
+                                <span>241.7</span>
+                            </div>
+                        </div> -->
+                    </div>                     
+                </div>
+            </div>
+            <div class="b_main b_main--center">
+                <div class="b_center__text" style="color: #fff">
+                    <p style="font-size: 12.5px;">What factors explain the spatial heterogeneity of population aging?</p>
+                </div>
+                <h2>Percent of the population aged 65 and over</h2>
+                <div class="legend">
+                    <div class="legend--up">
+                        <div class="legend--first"></div>
+                        <div class="legend--second"></div>
+                        <div class="legend--third"></div>
+                        <div class="legend--fourth"></div>
+                        <div class="legend--fifth"></div>
+                    </div>  
+                    <div class="legend--down">
+                        <span>11.3%</span>
+                        <span>31.6%</span>
+                    </div>
+                </div>
+                <div class="b_center__map" id="main_map"></div>
+                <p class="note"><i>Maps on the left and right show the <b>coefficients of the GWR</b></i></p>
+                <div class="logos">
+                    <img src="./data/logos.PNG" width="460" height="40" alt="Logos">
+                </div>
+            </div>
+            <div class="b_main b_main--right">
+                <div class="b_right">                    
+                    <div class="b__text">
+                        <h3>Capacity of residental care facilities</h3>
+                        <p class="note">Average association across the country and stronger in the south</p>
+                        <!-- <div class="legend">
+                            <div class="legend--up">
+                                <div class="legend--first"></div>
+                                <div class="legend--second"></div>
+                                <div class="legend--third"></div>
+                                <div class="legend--fourth"></div>
+                                <div class="legend--fifth"></div>
+                            </div>  
+                            <div class="legend--down">
+                                <span>120</span>
+                                <span>241.7</span>
+                            </div>
+                        </div> -->
+                    </div>   
+                    <div class="b__map" id="map_sat5"></div>                 
+                </div>
+                <div class="b_right">
+                    <div class="b__text">
+                        <h3>Net migration</h3>
+                        <p class="note">Strong association in the center and weakly aged areas</p>
+                        <!-- <div class="legend">
+                            <div class="legend--up">
+                                <div class="legend--first"></div>
+                                <div class="legend--second"></div>
+                                <div class="legend--third"></div>
+                                <div class="legend--fourth"></div>
+                                <div class="legend--fifth"></div>
+                            </div>  
+                            <div class="legend--down">
+                                <span>120</span>
+                                <span>241.7</span>
+                            </div>
+                        </div> -->
+                    </div>       
+                    <div class="b__map" id="map_sat3"></div>           
+                </div>
+                <div class="b_right">                    
+                    <div class="b__text">
+                        <h3>Gross income</h3>
+                        <p class="note">Weak inverse association in aged areas and average-low in younger regions</p>
+                        <!-- <div class="legend">
+                            <div class="legend--up">
+                                <div class="legend--first"></div>
+                                <div class="legend--second"></div>
+                                <div class="legend--third"></div>
+                                <div class="legend--fourth"></div>
+                                <div class="legend--fifth"></div>
+                            </div>  
+                            <div class="legend--down">
+                                <span>120</span>
+                                <span>241.7</span>
+                            </div>
+                        </div> -->
+                    </div>    
+                    <div class="b__map" id="map_sat7"></div>                 
+                </div>
+                <div class="b_right">                    
+                    <div class="b__text">
+                        <h3>Mean temperature</h3>
+                        <p class="note">Average association in aged zones and stronger in the south-east area</p>
+                        <!-- <div class="legend">
+                            <div class="legend--up">
+                                <div class="legend--first"></div>
+                                <div class="legend--second"></div>
+                                <div class="legend--third"></div>
+                                <div class="legend--fourth"></div>
+                                <div class="legend--fifth"></div>
+                            </div>  
+                            <div class="legend--down">
+                                <span>120</span>
+                                <span>241.7</span>
+                            </div>
+                        </div> -->
+                    </div>    
+                    <div class="b__map" id="map_sat8"></div>                 
+                </div>
+            </div>
+        </div>
+        <div class="content content__inferior">
+            <div class="b_inferior">
+                <h2>Methods</h2>
+                <ul style="list-style-type:none">
+                    <li>- Description of geographical distribution of aging across Spain</li>
+                    <li>- Geographically weighted regression (GWR)</li>
+                </ul>
+            </div>
+            <div class="b_inferior" style="color: #fff;">
+                <h2>Conclusions</h2>
+                <ul style="list-style-type:none">
+                    <li>- Low fertility levels and sustained declines in mortality are the primary drivers of the shift towards older ages</li>
+                    <li>- GWR model proved to be a good model for analyzing the variables that affect the spatial distribution of the elderly</li>
+                </ul>
+            </div>
+            <div class="b_inferior">
+                <h2>Future Work</h2>
+                <ul style="list-style-type:none">
+                    <li>- Incorporate information at a lower administrative level</li>
+                    <li>- Compare with other models, such as spatial-lag or spatial error</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Script base de D3 -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- Script para trabajar con archivos topoJson, geoJson y shapefiles -->
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <!-- Script que ofrece numerosas posibilidades de proyecciones geográficas (satellite o robinson, p.e.) -->
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <!-- Script que modifica las proyecciones y acerca territorios alejados del territorio 'principal' (Península y Canarias, p.e.) -->
+    <script src="https://unpkg.com/d3-composite-projections@1.2.0"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

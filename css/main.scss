@@ -1,0 +1,381 @@
+@import './reset';
+
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1000px;
+    height: 600px;
+
+    //Estructura
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+
+    position: relative;
+}
+
+.content {
+    //Bloques padre
+    &__superior {
+        height: 115px;
+
+        background: #E1D3B7;
+    }
+    &__main {
+        height: 386px;
+    }
+    &__inferior {
+        height: 85px;
+    }
+
+    //Bloques hijos
+    //SUPERIOR
+    &__superior {
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    //CENTRAL
+    &__main {
+        display: flex;
+        justify-content: space-between;
+
+        //MAPAS SATÉLITE IZQUIERDA
+        .b_main {
+            width: 100%;
+            height: 100%;            
+
+            &--left {
+                width: 261px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .b_left {
+                    width: 100%;
+                    height: 95px;
+
+                    position: relative;
+
+                    // DOS BLOQUES INTERNOS
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    .b__map {
+                        width: 100px;
+                    }
+                    .b__text {
+                        width: 150px;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        text-align: right;
+
+                        //Leyendas en parte izquierda
+                        & .legend {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            align-self: flex-end;
+                        
+                            width: 100px;
+                            height: auto;
+                        
+                            &--up {
+                                width: 100%;
+                                height: 10px;
+                        
+                                display: flex;
+                                justify-content: space-between;
+                        
+                                div {
+                                    width: 100px;
+                                    height: 100%;
+                                }
+                        
+                                .legend--first { background-color: #F7FCFD;}
+                                .legend--second { background-color: #CCECE6;}
+                                .legend--third { background-color: #66C2A4;}
+                                .legend--fourth { background-color: #238B45;}
+                                .legend--fifth { background-color: #00441B;}
+                            }
+                        
+                            &--down {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;                                
+                            }
+                        
+                        }
+                    }
+
+                    &:not(:last-of-type)::after {
+                        content: " ";
+                        position: absolute;
+                        height: 1px;
+                        background: #66C2A4;
+                        width: 255px;
+                        left: 50%;
+                        bottom: 0;
+                        transform: translate(-50%,1.5px);
+                    }
+                }
+            }
+
+            //MAPA CENTRAL
+            &--center {
+                width: 460px;
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                .b_center__map {
+                    width: 390px;
+                    height: 250px;
+                }
+
+                .b_center__text {
+                    width: 100%;
+                    background-color: hsla(141,40,32,.9);
+                    text-align: center;
+                    font-weight: 700;
+
+                    padding: 4px;
+                }
+
+                //Leyenda en parte central
+                & .legend {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                
+                    width: 150px;
+                    height: auto;
+                
+                    &--up {
+                        width: 100%;
+                        height: 10px;
+                
+                        display: flex;
+                        justify-content: space-between;
+                
+                        div {
+                            width: 60px;
+                            height: 100%;
+                        }
+                
+                        .legend--first { background-color: #F7FCFD;}
+                        .legend--second { background-color: #CCECE6;}
+                        .legend--third { background-color: #66C2A4;}
+                        .legend--fourth { background-color: #238B45;}
+                        .legend--fifth { background-color: #00441B;}
+                    }
+                
+                    &--down {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                
+                        div {
+                            width: 100%;
+                            font-size: 0.8em;
+                        }
+                        
+                    }
+                
+                }
+
+                .logos {
+                    width: 460px;
+                    height: 40px;
+
+                    background-color: #c3c3c3;
+                }
+            }
+
+            //MAPAS SATÉLITE DERECHA
+            &--right {
+                width: 261px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .b_right {
+                    width: 100%;
+                    height: 95px;
+
+                    position: relative;
+
+                    // DOS BLOQUES INTERNOS
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    .b__map {
+                        width: 100px;
+                    }
+                    .b__text {
+                        width: 150px;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        //Leyenda en parte derecha
+                        & .legend {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            align-self: flex-start;
+                        
+                            width: 100px;
+                            height: auto;
+                        
+                            &--up {
+                                width: 100%;
+                                height: 10px;
+                        
+                                display: flex;
+                                justify-content: space-between;
+                        
+                                div {
+                                    width: 60px;
+                                    height: 100%;
+                                }
+                        
+                                .legend--first { background-color: #F7FCFD;}
+                                .legend--second { background-color: #CCECE6;}
+                                .legend--third { background-color: #66C2A4;}
+                                .legend--fourth { background-color: #238B45;}
+                                .legend--fifth { background-color: #00441B;}
+                            }
+                        
+                            &--down {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                        
+                                div {
+                                    width: 100%;
+                                    font-size: 0.8em;
+                                }
+                                
+                            }
+                        
+                        }
+                    }
+
+                    &:not(:last-of-type)::after {
+                        content: " ";
+                        position: absolute;
+                        height: 1px;
+                        background: #66C2A4;
+                        width: 255px;
+                        left: 50%;
+                        bottom: 0;
+                        transform: translate(-50%,1.5px);
+                    }
+                }
+            }
+        }
+    }
+
+    // INFERIOR
+    &__inferior {
+        display: flex;
+        justify-content: space-between;
+
+        .b_inferior {
+            width: 460px;
+            height: 100%;
+            background-color: hsla(141,40,32,.9);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            
+            text-align: center;
+
+            padding: 4px 6px;
+
+            &:first-child, &:last-child {
+                background-color: #E1D3B7;
+                width: 262px;
+            }
+        }
+    }
+}
+
+//Textos
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+h3 {
+    font-size: 13px;
+}
+
+p {
+    font-size: 13px;
+
+    &.autores,&.note {
+        font-size: 12px;
+        font-style: italic;
+    }
+}
+
+span, li {
+    font-size: 12px;
+}
+
+ul {
+    margin: 0 auto;
+}
+
+ul li {
+    text-align: left;
+}
+
+h2, h3, p, span {
+    word-break: break-word;
+    hyphens: inherit;
+}
+
+//Estilo libre
+img {
+    position: absolute;
+    
+    &.bracket-1 {
+        top: 180px;
+        left: 265px;
+    }
+
+    &.bracket-2 {
+        top: 180px;
+        left: 705px;
+    }
+}
