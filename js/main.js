@@ -9,7 +9,7 @@ function initCentralMap() {
     let width = 370;
     let height = 250;
 
-    d3.json('../data/provincias_v1.json', function(error,data) {
+    d3.json('https://raw.githubusercontent.com/CarlosMunozDiazCSIC/poster_epc_envejecimiento/main/data/provincias_v1.json', function(error,data) {
         if (error) throw error;
 
         let provs = topojson.feature(data, data.objects.provincias_v1);
@@ -53,7 +53,7 @@ function initSatMaps() {
     let width = 100;
     let height = 95;
 
-    d3.json('../data/provincias_v1.json', function(error,data) {
+    d3.json('https://raw.githubusercontent.com/CarlosMunozDiazCSIC/poster_epc_envejecimiento/main/data/provincias_v1.json', function(error,data) {
         if (error) throw error;
 
         let provs = topojson.feature(data, data.objects.provincias_v1);
