@@ -303,3 +303,20 @@ function initSatMaps() {
             .attr("d", path);
     });
 }
+
+// setTimeout(() => {
+//     html2canvas(document.querySelector("#container"))
+//     .then(canvas => {
+//         canvas.style.display = 'none';
+//         document.body.appendChild(canvas);
+//         return canvas;
+//     })
+//     .then(canvas => {
+//         const image = canvas.toDataURL('image/png')
+//         const a = document.createElement('a')
+//         a.setAttribute('download', './poster_envejecimiento.png')
+//         a.setAttribute('href', image)
+//         a.click()
+//         canvas.remove()
+//     });
+// }, 4000);
